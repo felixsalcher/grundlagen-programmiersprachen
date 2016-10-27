@@ -9,8 +9,16 @@
     <h1>Vorlesung 01</h1>
 
 <script>
-    let beep = "beep";
-    console.log(beep);
+    function createHeadline(level,content) {
+        let headline = document.createElement("h"+level);
+        headline.appendChild(document.createTextNode(content));
+        document.body.appendChild(headline);
+    }
+
+    for(var i = 2; i < 7; i++) {
+        createHeadline(i, "Überschrift 0"+i);
+    }
+
 </script>
 </body>
 </html>
