@@ -9,14 +9,14 @@
 <body>
     <div>
         <img id="bild1" src="img/bild1.jpg" style="width:300px;"/><br/>
-        <input type="button" value="Klein (Style)"/>
-        <input type="button" value="Gross (Style)"/>        
+        <input type="button" value="Klein (Style)" onclick="changeStyle('bild1','300px')"/>
+        <input type="button" value="Gross (Style)" onclick="changeStyle('bild1','500px')"/>
     </div>
     <div>
         <img id="bild2" src="img/bild2.jpg" class="klein"/><br/>
-        <input type="button" value="Klein (Klasse)"/>
-        <input type="button" value="Gross (Klasse)"/>        
+        <input type="button" value="Klein (Klasse)" onclick="changeClass('bild2','klein')"/>
+        <input type="button" value="Gross (Klasse)" onclick="changeClass('bild2','gross')"/>
     </div>
-
+    <script src="js/code4.js"></script>
 </body>
 </html>
