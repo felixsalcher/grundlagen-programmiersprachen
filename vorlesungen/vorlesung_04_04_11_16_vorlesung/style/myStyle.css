@@ -1,0 +1,16 @@
+label { margin:5px 10px; }
+
+input { margin: 5px 10px; }
+
+input.breit{ width: 50%; }
+
+img { margin: 5px 10px; }
+
+img.klein{ width:300px; }
+
+img.gross{ width:500px; }
+
+.hinweis {
+    font-size: 2em;
+    color: #f00;
+}

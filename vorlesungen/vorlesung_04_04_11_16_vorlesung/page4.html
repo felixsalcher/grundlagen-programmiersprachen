@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Texte</title>
+    <link rel="stylesheet" type="text/css" href="style/myStyle.css"/>
+</head>
+
+<body>
+    <div>
+        <img id="bild1" src="img/bild1.jpg" style="width:300px;"/><br/>
+        <input type="button" value="Klein (Style)" onclick="bildKleinStyle();"/>
+        <input type="button" value="Gross (Style)" onclick="bildGrossStyle();"/>        
+    </div>
+    <div>
+        <img id="bild2" src="img/bild2.jpg" class="klein"/><br/>
+        <input type="button" value="Klein (Klasse)" onclick="bildKleinKlasse();"/>
+        <input type="button" value="Gross (Klasse)" onclick="bildGrossKlasse();"/>
+        <input type="button" value="Toggle" onclick="wechselKlasse();"/>
+    </div>
+    <script src="js/code4.js"></script>
+</body>
+</html>

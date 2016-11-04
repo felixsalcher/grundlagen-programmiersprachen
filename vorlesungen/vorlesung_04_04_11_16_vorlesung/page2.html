@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Kreisberechnung</title>
+    <link rel="stylesheet" type="text/css" href="style/myStyle.css"/>
+</head>
+
+<body>
+    <div>
+        <label>Radius:</label><br/>
+        <input id="eingabeRadius" type="number" value="10.5"/><br/>
+        <input type="button" value="Berechne" onclick="berechneKreis();"/><br/>
+        <label>Durchmesser:</label><br/>
+        <input id="durchmesser" readonly="readonly"/><br/>
+        <label>Umfang:</label><br/>
+        <input id="umfang" readonly="readonly"/><br/>
+        <label>Fl&auml;che:</label><br/>
+        <input id="flaeche" readonly="readonly"/>
+    </div>
+    <div id="ausgabe"></div>
+    <script src="js/code2.js"></script>
+</body>
+</html>
