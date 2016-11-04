@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 01</title>
+    <style>
+        label { display: inline-block; margin-top: 15px;}
+        input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rechteck</h1>
+    <label>Seite A</label>
+    <input type="text" id="seiteA">
+    <label>Seite B</label>
+    <input type="text" id="seiteB">
+    <br><br>
+    <label>Umfang</label>
+    <input type="text" id="umfang">
+    <label>Fläche</label>
+    <input type="text" id="flaeche">
+
+    <input type="button" value="Berechnen" onclick="berechneRechteck();">
+
+    <h1>Kegel</h1>
+    <label>Radius</label>
+    <input type="text" id="radius">
+    <label>Höhe</label>
+    <input type="text" id="hoehe">
+    <br><br>
+    <label>Grundfläche</label>
+    <input type="text" id="grundflaeche">
+    <label>Volumen</label>
+    <input type="text" id="volumen">
+    <label>Seitenhöhe</label>
+    <input type="text" id="seitenhoehe">
+    <label>Mantelfläche</label>
+    <input type="text" id="mantelflaeche">
+    <label>Oberfläche</label>
+    <input type="text" id="oberflaeche">
+
+    <input type="button" value="Berechnen" onclick="berechneKegel();">
+
+    <script src="scripts/aufgabe01.js"></script>
+</body>
+</html>
