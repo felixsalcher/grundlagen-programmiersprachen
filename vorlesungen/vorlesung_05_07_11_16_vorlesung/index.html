@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vorlesung 05</title>
+    <link href="styles/main.css" type="text/css">
+    <style>
+        .visible {
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bildergalerie</h1>
+
+    <input type="button" id="loadingButton" value="Bilder laden" onclick="bilderLaden();">
+    <br>
+
+    <div id="container" class="hidden">
+        <img id="image" src="">
+        <br>
+        <input type="button" value="Vorheriges" onclick="prevImg();">
+        <input type="button" value="Nächstes" onclick="nextImg();">
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
