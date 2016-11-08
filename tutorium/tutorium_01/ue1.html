@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 1</title>
+    <style>
+        input {
+            margin: 15px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript testen</h1>
+
+    <label for="meinText">Eingabe: </label>
+    <input type="text" id="meinText" value="7">
+
+    <label for="ausgabe">Ausgabe: </label>
+    <input type="text" id="ausgabe" readonly>
+
+    <input type="button" value="Ausgeben" onclick="ausgeben();">
+    <input type="button" value="Anfügen" onclick="textAnDivAnhaengen();">
+
+    <div id="container"></div>
+
+    <script src="js/ue1.js"></script>
+</body>
+</html>

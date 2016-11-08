@@ -20,5 +20,6 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function() {
     gulp.watch('vorlesungen/**/*', ['js']);
+    gulp.watch('tutorium/**/*', ['js']);
     gulp.watch('index.html', ['js']);
 });
