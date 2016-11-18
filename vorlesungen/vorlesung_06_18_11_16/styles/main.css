@@ -1,0 +1,21 @@
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
+
+.error {
+    color: #f00;
+    font-size: 1.5em;
+}
+
+.flex {
+    display: flex;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.flex > * {
+    flex: 1;
+}

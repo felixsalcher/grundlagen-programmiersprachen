@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menübestellung</title>
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Menübestellung</h1>
+    <div class="flex">
+        <label for="index">Menünummer:</label>
+        <input type="number" id="index">
+    </div>
+    <div class="flex">
+        <label for="amount">Anzahl:</label>
+        <input type="number" id="amount">
+    </div>
+    <div>
+        <input type="button" value="Bestellen" onclick="submit();">
+    </div>
+    <h2 id="error" class="hidden error"></h2>
+    <div id="order" class="hidden">
+        <h1>Ihre Bestellung</h1>
+        <p id="meal"></p>
+        <p id="orderAmount"></p>
+        <p id="allergenic"></p>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
