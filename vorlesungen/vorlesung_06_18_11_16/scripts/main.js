@@ -22,7 +22,6 @@ function submit() {
         error = getElement("error");
         chosenMeal = null;
 
-
     if(index > 0 && index <= foodList.length) {
         chosenMeal = foodList[index - 1];
         order.className = "visible";
@@ -34,5 +33,4 @@ function submit() {
         error.className = "visible error";
         error.innerHTML = "Menünummer muss zwischen 1 und " + foodList.length + " liegen!";
     }
-
 }
