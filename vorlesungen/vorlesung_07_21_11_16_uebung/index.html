@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabe Vorlesung 07</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div id="aufgabe1">
+            <input type="button" value="Schleife 1" onclick="schleife1();">
+            <input type="button" value="Schleife 2" onclick="schleife2();">
+            <input type="button" value="Schleife 3" onclick="schleife3();">
+            <input type="button" value="Schleife 1a" onclick="schleife1a();">
+            <input type="button" value="Schleife 2a" onclick="schleife2a();">
+            <input type="button" value="Schleife 3a" onclick="schleife3a();">
+
+            <div id="ausgabe"></div>
+        </div>
+
+        <div id="aufgabe2" class="col-container">
+            <label for="start">Startwert</label>
+            <input type="text" id="start">
+
+            <label for="end">Endwert</label>
+            <input type="text" id="end">
+
+            <label for="increment">Inkrement</label>
+            <input type="text" id="increment">
+
+            <input type="button" value="Anzeigen" onclick="createLoop();">
+            <div id="ausgabe2"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="aufgabe3" class="col-container">
+            <label for="amount">Anzahl Zeilen</label>
+            <input type="text" id="amount">
+            <div class="container">
+                <input type="button" value="Dreieck" onclick="createTriangle();">
+                <input type="button" value="Schachbrett" onclick="createChessBoard();">
+                <input type="button" value="Baum" onclick="createTree();">
+            </div>
+            <div id="ausgabe3"></div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
