@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vorlesung 08</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+    <style>
+        label {
+            display: inline-block;
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="aufgabe1">
+        <h1>Quersumme einer Zahl</h1>
+        <label for="value">Eingabe:</label>
+        <input type="text" id="value">
+        <br><br>
+        <label for="ausgabe">Ausgabe:</label>
+        <input type="text" id="ausgabe" readonly>
+        <br><br>
+        <input type="button" value="Quersumme berechnen" onclick="quersumme();">
+    </div>
+
+    <div id="aufgabe2">
+        <h1>Grösster gemeinsamer Teiler</h1>
+        <label for="valueA">A:</label>
+        <input type="text" id="valueA">
+        <br><br>
+        <label for="valueB">B:</label>
+        <input type="text" id="valueB">
+        <br><br>
+        <label for="teiler">Ergebnis:</label>
+        <input type="text" id="teiler" readonly>
+        <br><br>
+        <input type="button" value="Methode 1" onclick="teiler1();">
+        <input type="button" value="Methode 2" onclick="teiler2();">
+    </div>
+
+    <div id="aufgabe4">
+        <h1>Primzahlen zwischen 10 und 100</h1>
+        <input type="button" value="Primzahlen berechnen" onclick="primzahl();">
+        <br><br>
+        <div id="primzahlAusgabe"></div>
+    </div>
+
+    <div id="aufgabe5">
+        <h1>Bildgrösse verändern</h1>
+        <input type="button" value="-10" onclick="smaller();">
+        <input type="button" value="+10" onclick="bigger();">
+        <br>
+        <img src="images/true.png" id="img1">
+        <img src="images/true.png" id="img2">
+        <img src="images/true.png" id="img3">
+        <img src="images/true.png" id="img4">
+        <img src="images/true.png" id="img5">
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
