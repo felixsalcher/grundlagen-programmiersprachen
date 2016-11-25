@@ -43,6 +43,11 @@ function teiler2() {
         b = document.getElementById("valueB").value,
         rest = 0;
 
+    if(isNaN(parseInt(a)) || isNaN(parseInt(b))) {
+        alert("Bitte gültige Zahlen eingeben");
+        return;
+    }
+
     while(b != 0) {
         rest = a % b;
         a = b;
