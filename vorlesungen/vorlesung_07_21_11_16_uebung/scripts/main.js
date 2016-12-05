@@ -74,14 +74,6 @@ function createLoop() {
         increment = parseInt(getElement("increment").value),
         ausgabe = "";
 
-    if(increment < 0) {
-        console.log(increment);
-        increment = increment * -1;
-        console.log(increment);
-
-        document.getElementById("increment").value = increment;
-    }
-
     for(let i = startwert; i <= endwert; i += increment) {
         ausgabe += i + " ";
     }
@@ -93,9 +85,8 @@ function createTriangle() {
         ausgabe = "";
 
     for(let i = 1; i <= rows; i++) {
-        console.log(i);
+
         for(let j = 1; j <= i; j++) {
-            console.log(j);
             ausgabe += "* ";
         }
         ausgabe += "<br>";
