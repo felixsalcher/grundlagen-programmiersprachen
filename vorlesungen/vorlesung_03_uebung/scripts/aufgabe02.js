@@ -33,7 +33,7 @@ function barrelRoll() {
 
     setTimeout(function(){
         images[0].className = images[1].className = "";
-    }, 1000)
+    }, 1000);
 }
 
 //this is the shit that happens on a boring train ride home
@@ -46,5 +46,5 @@ function redButton() {
     setTimeout(function () {
         alert("You should not have done that. What was once seen, can not be unseen!");
         images[0].className = images[1].className = "";
-    }, 11000)
+    }, 11000);
 }

@@ -6,7 +6,7 @@ function isNumber() {
     let number = getElement("input").value,
         img = getElement("imgSmiley");
     if(!isNaN(parseFloat(number))) {
-        img.src = "images/true.png"
+        img.src = "images/true.png";
     }
     else {
         img.src = "images/false.png";

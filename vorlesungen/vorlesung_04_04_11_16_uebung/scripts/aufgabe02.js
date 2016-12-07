@@ -29,6 +29,6 @@ function validate() {
         passwordControl.focus();
     }
     else {
-        alert("Alles passt! Registrierung abgeschlossen")
+        alert("Alles passt! Registrierung abgeschlossen");
     }
 }

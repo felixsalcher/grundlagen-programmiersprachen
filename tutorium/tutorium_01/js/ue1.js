@@ -6,7 +6,9 @@ function test1() {
     test = "Hallo"; //String
     test = true; //Boolean
     test = new Date(); //Objekte
-    test = function() {}; //Funktion
+    test = function() {
+        console.log('foo');
+    }; //Funktion
 }
 
 function test2() {
