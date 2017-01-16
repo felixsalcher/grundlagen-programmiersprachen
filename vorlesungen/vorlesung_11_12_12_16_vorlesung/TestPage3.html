@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script type="text/javascript">
+        function testOhneFehlerwurf(){
+            "use strict";
+            let zahl=parseInt(document.getElementById("eingabe").value);
+            if (!checkZahlOhneFehlerwurf(zahl)){
+                alert("Ungültige oder negative Zahl");
+                return;
+            }
+            alert(zahl);
+        }
+        
+        function checkZahlOhneFehlerwurf(zahl){
+            "use strict";
+            return !(isNaN(zahl) || zahl < 0);
+        }
+        
+        function testMitFehlerwurf(){
+            "use strict";
+            try{
+                let zahl=parseInt(document.getElementById("eingabe").value);
+                checkZahlMitFehlerwurf(zahl);
+                alert(zahl);
+            }catch(e){
+               alert("Fehler: " + e.message); 
+            }
+        }
+        
+        function checkZahlMitFehlerwurf(zahl){
+            "use strict";
+            if(isNaN(zahl)){
+                throw new Error("Ungültige Zahl!");
+            }
+            else if(zahl<0){
+                throw new Error("Eingabe darf nicht negativ sein!");
+            }
+
+            return true;
+        }
+       
+    </script>
+    <title>TestPage</title>
+</head>
+
+<body>
+<input type="text" id="eingabe"/>
+<br/>
+<input type="button" value="Ohne Fehlerwurf" onclick="testOhneFehlerwurf();"/>
+<input type="button" value="Mit Fehlerwurf" onclick="testMitFehlerwurf();"/>
+
+
+</body>
+</html>

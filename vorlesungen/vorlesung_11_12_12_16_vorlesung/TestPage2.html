@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script type="text/javascript">
+        function test() {
+            "use strict";
+            try {
+                let zahl=parseInt(document.getElementById("eingabe").value);
+
+                if(isNaN(zahl)) {
+                    throw new Error("Ungültige Zahl!");
+                }
+                if(zahl<0) {
+                    throw new Error("Eingabe darf nicht negativ sein!");
+                }
+                alert(zahl);
+            } catch(e) {
+               alert("Fehler: " + e.message); 
+            }
+        }
+       
+    </script>
+    <title>TestPage</title>
+</head>
+
+<body>
+    <input type="text" id="eingabe"/>
+    <br/>
+    <input type="button" value="Test" onclick="test();"/>
+
+
+</body>
+</html>

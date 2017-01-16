@@ -27,6 +27,7 @@ gulp.task('browser-sync', ['eslint'], function() {
 });
 
 gulp.task('watch', function() {
+    gulp.watch('index.html', ['reload']);
     gulp.watch('vorlesungen/**/*', ['eslint', 'reload']);
     gulp.watch('experiments/**/*', ['eslint', 'reload']);
 });

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script type="text/javascript">
+        function a() {
+            "use strict";
+
+            try {
+                b();
+            } catch(e){
+                alert("Fehler: " + e.message);
+            }
+        }
+        
+        function b(){
+            "use strict";
+            c();
+        }
+        
+        function c(){
+            "use strict";
+            let v = document.getElementById("gibtsNicht").value;
+            alert(v);
+        }
+    </script>
+    <title>TestPage</title>
+</head>
+
+<body>
+<input type="button" value="Aufruf von A" onclick="a();"/>
+
+
+</body>
+</html>

@@ -10,7 +10,7 @@ function ggT(method) {
         alert("Bitten geben Sie für alle Werte eine positive Zahl ein!");
         return;
     }
-    let ergebnis = 0;
+
     return method(z1, z2);
 }
 

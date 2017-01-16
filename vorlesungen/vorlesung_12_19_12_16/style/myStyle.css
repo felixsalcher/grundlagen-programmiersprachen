@@ -1,0 +1,28 @@
+div {
+    margin: 10px;
+}
+
+label {
+    display:block;
+    float:left;
+    margin-right: 10px;
+}
+
+input.eingabeLogin{
+    display: block;
+    float:none;
+    margin-left:100px;
+    width: 170px;
+}
+
+input.eingabePrimzahl{
+    display: block;
+    float:none;
+    margin-left:100px;
+    width: 70px;
+}
+
+#ausgabeFehler{
+    font-size: 1.5em;
+    color: red;
+}
