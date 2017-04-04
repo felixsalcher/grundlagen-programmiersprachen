@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script type="text/javascript">        
+        //anonyme Funktionen
+        //kein Argument
+        (() => alert("Guten Morgen"))();
+        
+        //nur 1 Argument auch in Klammern
+        ((x) => alert(Math.pow(x,2)))(5);
+        
+        //mehr als 1 Argument
+        ((x,y) => alert(x+y))(5,10);
+        
+        //mehrzeilige Anweisungen in geschweiften Klammern
+        ((zahl) => {
+            var kum=0;
+            while(zahl!==0){
+                kum+=(zahl%10);
+                zahl=parseInt(zahl/10);                
+            }
+            alert(kum);
+        })(1234);
+    </script>
+    <title>Page Title</title>
+</head>
+
+<body>
+    
+</body>
+</html>

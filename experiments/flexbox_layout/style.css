@@ -1,0 +1,39 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 860px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.navbar {
+    width: 100%;
+    height: 120px;
+    background-color: lightyellow;
+}
+
+.slider {
+    width: auto;
+    height: 56.25vh;
+    background-image: url("batman.jpg");
+    background-size: cover;
+    overflow: hidden;
+    background-position: left;
+}
+
+.content {
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+.content p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}

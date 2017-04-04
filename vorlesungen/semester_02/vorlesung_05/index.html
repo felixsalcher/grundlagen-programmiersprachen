@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Übung String Datum Array</title>
+    <style>
+        div {margin: 10px 5px;}
+    </style>
+</head>
+
+<body>
+    <h1>Aufgabe 1</h1>
+    <div>
+        <input type="button" value="Celsius > Fahrenheidt" onclick="berechneFahrenheidt();"/>
+    </div>
+    <div id="ausgabeCelsius"></div>
+    <div id="ausgabeFahrenheidt"></div>
+    <h1>Aufgabe 2</h1>
+    <div>
+        <label>Zahl:</label><br/>
+        <input type="number" id="eingabeZahl"/>
+    </div>
+    <div>
+        <input type="button" value="Quersumme" onclick="berechneQuersumme();"/>
+    </div>
+    <div id="ausgabeQuersumme"></div>
+    <h1>Aufgabe 3</h1>
+    <div>
+        <label>Artikelnummer:</label><br/>
+        <input type="text" id="eingabeArtikelnummer"/>
+    </div>
+    <div>
+        <input type="button" value="Prüfung" onclick="pruefeArtikelnummer();"/>
+    </div>
+    <div id="ausgabePruefung"></div>
+    <h1>Aufgabe 4</h1>
+    <div>
+        <label>Tag:</label><br/>
+        <input type="number" id="eingabeTag" min="1" max="31" value="1"/><br/>
+        <label>Monat:</label><br/>
+        <input type="number" id="eingabeMonat" min="1" max="12" value="1"/><br/>
+        <label>Jahr:</label><br/>
+        <input type="number" id="eingabeJahr" value="2017"/><br/>
+    </div>
+    <div>
+        <input type="button" value="Alter in Jahren" onclick="berechneAlter();"/>
+    </div>
+    <div id="ausgabeAlter"></div>
+    <h1>Aufgabe 5</h1>
+    <div>
+        <label>Eingabe:</label><br/>
+        <input type="text" id="eingabeText"/>
+    </div>
+    <div>
+        <input type="button" value="Kodierung" onclick="codiereText();"/>
+        <input type="button" value="Dekodierung" onclick="decodiereText();"/>
+    </div>
+    <div id="ausgabeText"></div>
+    <script src="js/codeUebung.js"></script>
+</body>
+</html>

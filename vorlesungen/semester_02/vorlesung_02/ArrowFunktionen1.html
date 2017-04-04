@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script type="text/javascript">        
+        function testAddition(){
+            alert(addition(5,10));
+        }
+        
+        function testQuadrat(){
+            alert(quadrat(10));
+        }
+        
+        function testBegruessung(){
+            alert(begruessung());
+        }
+        
+        function testQuersumme(){
+            alert(quersumme(1234));
+        }
+        
+        //kein Argument
+        var begruessung = () => "Guten Morgen";
+        
+        //nur 1 Argument
+        var quadrat = x => Math.pow(x,2);
+        
+        //mehr als 1 Argument
+        var addition = (x,y) => x+y;
+        
+        //mehrzeilige Anweisungen in geschweiften Klammern
+        var quersumme = zahl => {
+            var kum=0;
+            while(zahl!==0){
+                kum+=(zahl%10);
+                zahl=parseInt(zahl/10);                
+            }
+            return kum;
+        };
+    </script>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <input type="button" value="Hallo" onclick="testBegruessung();"/>
+    <input type="button" value="Addition" onclick="testAddition();"/>
+    <input type="button" value="Quadrat" onclick="testQuadrat();"/>
+    <input type="button" value="Quersumme" onclick="testQuersumme();"/>
+</body>
+</html>

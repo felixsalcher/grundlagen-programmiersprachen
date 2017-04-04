@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script type="text/javascript">
+        var meinArray=[1, 2, 4, 5, 5, 6, 7, 8, 8, 9, 10];
+        
+        function anzeigeArray() {
+            document.getElementById("anzeigeArray").innerHTML=meinArray.join(", ");
+        }
+        
+    //Array durchlaufen und Aktion durchführen
+        //klassisch
+        function testForEach(){
+            meinArray.forEach(function(x) {console.log(x);});
+        }
+        
+        //mit Arrow-Funktion
+        function testForEachArrow(){
+            meinArray.forEach(x =>  console.log(x));
+        }
+        
+        
+    //Array Filtern
+        //klassisch
+        function testFilter(){
+            var _result=meinArray.filter(function(x){return x<=5;});
+            document.getElementById("ausgabe").innerHTML=_result.join("<br/>");
+        }
+        
+        //mit Arrow-Funktion
+        function testFilterArrow(){
+            var _result=meinArray.filter(x => x<=5);
+            document.getElementById("ausgabe").innerHTML=_result.join("<br/>");
+        }
+        
+    //Array nach dem ersten Element durchsuchen, das die Bedingung erfüllt
+        //klassisch
+        function testFind(){
+            var _result=meinArray.find(function(x){return x<=5;});
+            document.getElementById("ausgabe").innerHTML=_result;
+        }
+        
+        //mit Arrow-Funktion
+        function testFindArrow(){
+            var _result=meinArray.find(x => x<=5);
+            document.getElementById("ausgabe").innerHTML=_result;
+        }
+        
+    //Aus einem Array ein weiteres Array mit neuen Inhalten erstellen
+        //klassisch
+        function testMap(){
+            var _result=meinArray.map(function(x){return Math.pow(x,2);});
+            document.getElementById("ausgabe").innerHTML=_result.join("<br/>");
+        }
+        
+        //mit Arrow-Funktion
+        function testMapArrow(){
+            var _result=meinArray.map(x => Math.pow(x,2));
+            document.getElementById("ausgabe").innerHTML=_result.join("<br/>");
+        }
+        
+        //mit Arrow-Funktion; es werden nur die geraden Zahlen quadriert
+        function testMapArrow1(){
+            var _result=meinArray.map(x => {
+                if(x % 2 === 0){
+                    return Math.pow(x,2);       
+                }else{
+                    return x;
+                }
+            });
+            document.getElementById("ausgabe").innerHTML=_result.join("<br/>");
+        }
+        
+        //mit Arrow-Funktion; es werden nur die Zahlen an gerader Indexposition quadriert
+        function testMapArrow2(){
+            var _result=meinArray.map((x, index) => {
+                if(index % 2 === 0){
+                    return Math.pow(x,2);       
+                }else{
+                    return x;   
+                }
+            });
+            document.getElementById("ausgabe").innerHTML=_result.join("<br/>");
+        }
+        
+    //Aus den Inhalten des Arrays einen einzigen Wert errechnen
+        //klassisch: addieren aller Zahlen        
+        function testReduce(){
+            let gesamt=meinArray.reduce(function(zwischenergebnis, x){
+                return zwischenergebnis + x;
+            });
+            document.getElementById("ausgabe").innerHTML=gesamt;
+        }
+        
+        //mit Arrow-Funktion: addieren aller Zahlen        
+        function testReduceArrow(){
+            let gesamt=meinArray.reduce((zwischenergebnis, x) => zwischenergebnis + x);
+            document.getElementById("ausgabe").innerHTML=gesamt;
+        }
+        
+        //mit Arrow-Funktion: addieren aller geraden Zahlen
+        function testReduceArrow1(){
+            alert("Achtung Falle: Erster Eintrag wird immer verwendet um Zwischenergebnis zu initialisieren!");
+            let gesamt=meinArray.reduce((zwischenergebnis, x) => {
+                if(x % 2 === 0){
+                    return zwischenergebnis + x;
+                } else{
+                    return zwischenergebnis;
+                }
+            });
+            document.getElementById("ausgabe").innerHTML=gesamt;
+        }
+        
+        //mit Arrow-Funktion: addieren aller Zahlen an geraden Indexpositionen
+        function testReduceArrow2(){
+            alert("Achtung Falle: Erster Eintrag wird immer verwendet um Zwischenergebnis zu initialisieren!");
+            let gesamt=meinArray.reduce((zwischenergebnis, x, index) => {
+                if(index % 2 !== 0){
+                    return zwischenergebnis + x;
+                } else{
+                    return zwischenergebnis;
+                }
+            });
+            document.getElementById("ausgabe").innerHTML=gesamt;
+        }
+        
+        
+        
+        
+        
+        
+       
+    </script>
+    <title>Page Title</title>
+</head>
+
+<body onload="anzeigeArray();">
+    <div id="anzeigeArray"></div>
+    <input type="button" value="ForEach" onclick="testForEach();"/>
+    <input type="button" value="ForEachArrow" onclick="testForEachArrow();"/>
+    <input type="button" value="Filter" onclick="testFilter();"/>
+    <input type="button" value="FilterArrow" onclick="testFilterArrow();"/>
+    <input type="button" value="Find" onclick="testFind();"/>
+    <input type="button" value="FindArrow" onclick="testFindArrow();"/>
+    <input type="button" value="Map" onclick="testMap();"/>
+    <input type="button" value="MapArrow" onclick="testMapArrow();"/>
+    <input type="button" value="MapArrow1" onclick="testMapArrow1();"/>
+    <input type="button" value="MapArrow2" onclick="testMapArrow2();"/>
+    <input type="button" value="Reduce" onclick="testReduce();"/>
+    <input type="button" value="ReduceArrow" onclick="testReduceArrow();"/>
+    <input type="button" value="ReduceArrow1" onclick="testReduceArrow1();"/>
+    <input type="button" value="ReduceArrow2" onclick="testReduceArrow2();"/>
+    <div id="ausgabe"></div>
+</body>
+</html>
