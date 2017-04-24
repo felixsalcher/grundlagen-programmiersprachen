@@ -1,0 +1,17 @@
+div {
+    margin: 10px 5px;
+}
+
+.hervorgehoben {
+    background-color: #06BB00;
+    font-weight: bold;
+}
+
+.bildKlein{
+    width: 100px;
+}
+
+.bildGross{
+    width: 200px;
+}
+
