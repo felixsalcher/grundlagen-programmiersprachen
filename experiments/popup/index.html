@@ -7,7 +7,33 @@
     <link rel="stylesheet" href="styles/main.css" type="text/css">
 </head>
 <body>
+    <div class="main">
+    </div>
 
+    <div class="modal-container hide" id="modal-container">
+        <div class="modal hide" id="modal">
+            <div class="modal-header">
+                <h3>Möchtest du deine Gemeinde auf uns aufmerksam machen?</h3>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Suche online die E-Mailadresse deines Bürgermeisters oder deiner Gemeinde.
+                    Wir kontaktieren sie <strong>anonym</strong> für dich und stellen Ihnen Vocita vor.
+                </p>
+                <form>
+                    <input type="email" id="email" name="email" placeholder="E-Mail deiner Gemeinde">
+                    <input type="submit" id="submit" name="submit" value="Abschicken">
+                    <input type="button" class="no-button" id="cancel" name="cancel" value="Nein Danke">
+                </form>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

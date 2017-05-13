@@ -1,0 +1,40 @@
+
+#divListe
+{
+    margin:20px 10px;
+}
+
+#divAbsaetze{
+    margin:20px 10px;
+}
+
+#divNav
+{
+    margin:20px 10px;
+}
+
+#divNav ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+#divNav ul li { display: inline; }
+
+#divNav ul li a
+{
+text-decoration: none;
+padding: .2em 1em;
+color: #000000;
+background-color:#13EF00;
+}
+
+#divNav ul li a:hover
+{
+color: #F10A00;
+background-color: #B9F899;
+}
+
+
+

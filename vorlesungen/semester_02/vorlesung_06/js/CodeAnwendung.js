@@ -19,13 +19,13 @@ function aufgabe4(){
 }
 
 function aufgabe5(){
-    Array.prototype.forEach.call(document.links, link => {
+    [].forEach.call(document.links, link => {
        link.style.fontSize = "1.5em";
     });
 }
 
 function aufgabe6(){
-    Array.prototype.forEach.call(document.getElementsByTagName("p"), p => {
+    [].forEach.call(document.getElementsByTagName("p"), p => {
         p.style.textAlign = "right";
     });
 }
@@ -35,13 +35,13 @@ function aufgabe7(){
 }
 
 function aufgabe8(){
-    Array.prototype.forEach.call(document.images, el => {
+    [].forEach.call(document.images, el => {
         el.className == "bildGross" ? el.className = "bildKlein" : el.className = "bildGross";
     });
 }
 
 function aufgabe9(){
-    Array.prototype.forEach.call(document.querySelectorAll("div > input"), el => {
+    [].forEach.call(document.querySelectorAll("div > input"), el => {
         el.style.fontWeight = "bold";
     });
 }
