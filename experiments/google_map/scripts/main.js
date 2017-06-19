@@ -7,7 +7,7 @@ function openDB() {
 }
 
 function createTable(tx) {
-    tx.executeSql('CREATE TABLE IF NOT EXISTS locations(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, city_name TEXT NOT NULL UNIQUE, lat REAL, lng REAL);', [], SQLSuccess, SQLFail);
+    tx.executeSql('CREATE TABLE IF NOT EXISTS locations(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, city_name TEXT NOT NULL UNIQUE, lat REAL NOT NULL, lng REAL NOT NULL);', [], SQLSuccess, SQLFail);
 }
 
 function getAllEntries(tx) {
@@ -18,12 +18,10 @@ function addMarkers(tx, result) {
     var marker;
 
     //create a marker for every entry in the database
-    for(var location in result.rows) {
+    for(let location in result.rows) {
         if(result.rows.hasOwnProperty(location)) {
-            console.log(result.rows[location]);
-
             marker = new google.maps.Marker({
-                map: map,
+                map: map, //marker gets a reference to the map
                 position: { lat: result.rows[location].lat, lng: result.rows[location].lng }
             });
         }
@@ -66,7 +64,7 @@ function initMap() {
 }
 
 function geocodeAddress(geocoder, resultsMap) {
-    var address = document.getElementById('city_name').value;
+    let address = document.getElementById('city_name').value;
 
     geocoder.geocode(
         { 'address': address },
@@ -77,14 +75,14 @@ function geocodeAddress(geocoder, resultsMap) {
                 let coordinate = {lat: result.lat(), lng: result.lng()};
 
                 //add marker for new location
-                var marker = new google.maps.Marker({
+                let marker = new google.maps.Marker({
                     map: resultsMap,
                     position: coordinate
                 });
 
                 //save new location into database
                 db.transaction(function(tx) {
-                    tx.executeSql('INSERT INTO locations(city_name, lat, lng) VALUES (?, ?, ?);', [address, lat, lng], SQLSuccess, SQLFail);
+                    tx.executeSql('INSERT INTO locations(city_name, lat, lng) VALUES (?, ?, ?);', [address, coordinate.lat, coordinate.lng], SQLSuccess, SQLFail);
                 });
 
             }
