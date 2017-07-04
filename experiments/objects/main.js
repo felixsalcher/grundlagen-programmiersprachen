@@ -19,7 +19,7 @@ var utilityHelper = utilityHelper || {
         for(let i = 0; i < arguments.length; i++) {
             result += arguments[i] + " ";
         }
-
+        console.log(arguments[4]);
         return result;
     },
     getElement: function (id) {

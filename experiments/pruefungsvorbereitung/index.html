@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prüfungsvorbereitung</title>
+    <link rel="stylesheet" href="../../font-styles.css" type="text/css">
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+
+    <style>
+        input {
+            display: block;
+        }
+
+        input[type="button"] {
+            margin: 15px 0;
+        }
+
+        select {
+            width: 400px;
+        }
+
+        #kappa {
+            position: absolute;
+            right: 20%;
+            animation: rotate 2s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <label for="inputId">Id:</label>
+    <input type="text" id="inputId">
+
+    <label for="inputBezeichnung">Bezeichnung:</label>
+    <input type="text" id="inputBezeichnung">
+
+    <label for="inputFarbe">Farbe:</label>
+    <input type="text" id="inputFarbe">
+
+    <input type="button" id="save" value="speichern">
+    <select name="selectPflanzen" id="selectPflanzen" size="8"></select>
+
+    <img src="kappa.png" id="kappa">
+
+    <script src="scripts/classes.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
